@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+    <title>Letter Buddies</title>
+  </head>
+  <body>
+    <!-- Transparency Overlay -->
+    <div id="transparencyOverlay" style="display: none">
+      <div id="transparencyContent">
+        <h2>Hangman Rules:</h2>
+        <ul>
+          <li>Rule 1: ...</li>
+          <li>Rule 2: ...</li>
+          <li>Rule 3: ...</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="lobbyPage">
+      <button id="startButton" onclick="startGame()"></button>
+      <button
+        id="rulesButton"
+        onmouseover="showTransparencyOverlay()"
+        onmouseout="hideTransparencyOverlay()"
+      ></button>
+      <audio id="lobbyMusic" src="./audiodump/lobbymusic1.mp4" loop></audio>
+    </div>
+
+    <!-- Categories Buttons -->
+    <div id="categoriesPage">
+      <button id="colours" class="categories"></button>
+      <button id="fruits" class="categories"></button>
+      <button id="vegetables" class="categories"></button>
+      <button id="flowers" class="categories"></button>
+    </div>
+    
+    <!-- Gameplay Page -->
+
+    <div id="gameplaypage">
+      <p id="word-display">
+      </p>
+      <div id="button-container"></div>
+      <p class="remainingGuessesLogo"> REMAINING GUESSES:<span id="remainingGuesses"></span>
+      </div></p>
+    
+    </div>
+
+    <!-- Win Page  -->
+    <div id="winMessage">
+    </div>
+    <!-- Win Page  -->
+    <div id="winMessage">
+    </div>
+
+    <!-- Lose Page  -->
+    <div id="loseMessage">!!!!!!
+    </div>
+    
+
+    <!-- Your other sections (rulesPage, categoriesPage, gamePage) go here -->
+    <script src="./js/main.js"></script>
+    <script src="./js/wordbank.js"></script>
+  </body>
+</html>

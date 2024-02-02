@@ -1,0 +1,263 @@
+#lobbyPage {
+    position: relative;
+    background-image: url('../imagedump/lobby-background1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#rulesButton, #startButton {
+    border: 1px solid black;
+    padding: 0;
+    margin: 0;
+    background: none;
+}
+
+#rulesButton {
+    background-image: url('../imagedump/rules.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    width: 250px;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+#startButton {
+    background-image: url('../imagedump/startbutton.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 300px;
+    height: 80px;
+    cursor: pointer;
+}
+
+#categoriesPage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 1px solid black;
+    display: grid;  grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px; /* Adjust the gap between buttons */
+    display: none;
+}
+
+.categories {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    width: 250px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+
+#word-display {
+    font-size: 16px;
+}
+#categoriesPage .categories {
+    box-sizing: content-box;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+#colours {
+    background: none;
+    background-image: url('../imagedump/coloursbutton.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    width: 250px;
+    height: 60px;
+}
+
+#fruits {
+    background: none;
+    background-image: url('../imagedump/fruitsbutton.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    width: 250px;
+    height: 60px;
+}
+
+#vegetables {
+    background: none;
+    background-image: url('../imagedump/vegetablesbutton.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    width: 250px;
+    height: 60px;
+}
+
+#flowers {
+    background: none;
+    background-image: url('../imagedump/flowersbutton.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    width: 250px;
+    height: 60px;
+}
+
+/* Add these styles for the transparency overlay */
+
+#transparencyOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    z-index: 1000; /* Adjust the z-index as needed to ensure it appears above other elements */
+    border: 10px solid black
+}
+
+#transparencyContent {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#transparencyContent h2 {
+    margin-bottom: 20px;
+}
+
+#transparencyContent ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#transparencyContent li {
+    margin-bottom: 10px;
+}
+
+#gameplaypage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../imagedump/gameplay-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#winMessage {
+    position:fixed;
+    height:100%;
+    width:100%;
+    background-image: url('../imagedump/winpage-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#loseMessage {
+    position:fixed;
+    height:100%;
+    width:100%;
+    background-image: url('../imagedump/losepage-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.remainingGuessesLogo {
+    /*background-color: #355E3B;*/
+    transform: translate(0%, -50%);
+    font-size: 35px;
+    /*border: 1px solid rgb(27, 24, 24);*/
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #0020C2; /* White text color */
+    /*-webkit-text-stroke: 1px #f8f6f6;*/
+    position: absolute;
+    top: 0%;
+    right: 2%;
+}
+
+#word-display {
+    font-family: "Silkscreen", sans-serif;
+    font-size: 45px;
+    position: absolute;
+    top: 45%;
+    left: 7%;
+    opacity: 0.8;
+}
+
+#button-container {
+    /*border: 1px solid black;*/
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px;
+    position: absolute;
+    top: 74%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+}
+
+.keycaps {
+    padding: 10px;
+    background-color: black;
+    color: #ffffff;
+    border: 1px solid #2980b9;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 26px; 
+    font-family: "Silkscreen", sans-serif;
+    
+}
+
+/* Specific styling for the first row */
+.keycaps:nth-child(-n+10) {
+    grid-row: 1;
+}
+
+/* Specific styling for the second row */
+.keycaps:nth-child(n+11):nth-child(-n+19) {
+    grid-row: 2;
+}
+
+/* Specific styling for the third row */
+.keycaps:nth-child(n+20) {
+    grid-row: 3;
+}
+
